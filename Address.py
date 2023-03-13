@@ -46,6 +46,6 @@ class Address:
     def getZipCode(self):
         return self.__zipcode
 
-    # String formatter
+    # Display address information
     def __str__(self):
         return f'{self.__strNo}, {self.__city}, {self.__state} {self.__zipcode}'
