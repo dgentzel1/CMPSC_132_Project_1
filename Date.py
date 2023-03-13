@@ -37,7 +37,7 @@ class Date:
     def getYear(self):
         return self.__year
 
-    # Print out date information
+    # Display date information
     def __str__(self):
         return f'\nThe date is: {self.__day}/{self.__month}/{self.__year}.'
 
