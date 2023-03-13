@@ -24,7 +24,7 @@ class Phone:
     def setPhoneType(self, phoneType):
         self.__phone_type = phoneType
 
-    # Phone number accessor
+    # Phone type accessor
     def getPhoneType(self):
         return self.__phone_type
 
