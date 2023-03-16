@@ -39,5 +39,5 @@ class Date:
 
     # Display date information
     def __str__(self):
-        return f'\nThe date is: {self.__day}/{self.__month}/{self.__year}.'
+        return f'{self.__month}/{self.__day}/{self.__year}'
 

@@ -30,5 +30,5 @@ class Phone:
 
     # Display phone information
     def __str__(self):
-        return f'Phone: {self.__phone_number} {self.__phone_type}'
+        return f'{self.__phone_number} ({self.__phone_type})'
 

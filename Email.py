@@ -30,5 +30,5 @@ class Email:
 
     # Display email information
     def __str__(self):
-        return f'Email: {self.__email_address} {self.__email_type}'
+        return f'{self.__email_address} ({self.__email_type})'
 
