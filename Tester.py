@@ -20,11 +20,54 @@ print('This program will allow users to add, edit, search, and remove student in
 student_list = []
 
 # Populate with 5 example students
-student_list.append(Student(1, 'John', 'Michael', 'Doe', ['123 Main St', 'Apt 2B'], ['johndoe@example.com Personal'], ['610-555-1234 Mobile'], '2001-01-01', '2022-09-01', 'Fall 2022', 'Computer Science'))
-student_list.append(Student(2, 'Jane', '', 'Smith', ['456 Elm St', 'Apt 3C'], ['janesmith@example.com Personal'], ['610-555-5678 Mobile'], '2002-02-02', '2022-09-01', 'Fall 2022', 'Biology'))
-student_list.append(Student(3, 'Bob', 'William', 'Johnson', ['789 Oak St', 'Apt 4D'], ['bob@example.com Personal', 'bwilliam@example.com Work'], ['610-555-9012 Mobile', '610-555-3456 Work'], '2003-03-03', '2023-01-15', 'Spring 2023', 'Psychology'))
-student_list.append(Student(4, 'Samantha', 'M', 'Garcia', ['321 Pine St', 'Apt 5E'], ['samantha@example.com Personal'], ['610-555-7890 Mobile'], '2004-04-04', '2023-01-15', 'Spring 2023', 'History'))
-student_list.append(Student(5, 'David', 'J', 'Lee', ['654 Cedar St', 'Apt 6F'], ['davidlee@example.com Personal'], ['610-555-2345 Mobile'], '2005-05-05', '2022-09-01', 'Fall 2022', 'English'))
+
+# Student addresses
+student1Addresses = [Address('123 Main St', 'Houston', 'Montana', 15213)]
+student2Addresses = [Address('456 Elm St', 'Philadelphia', 'Colorado', 17234)]
+student3Addresses = [Address('324 Spruce St', 'Los Angeles', 'Pennyslvania', 16312)]
+student4Addresses = [Address('321 Pine St', 'New Orleans', 'Delaware', 13241)]
+student5Addresses = [Address('654 Cedar St', 'Seattle', 'California', 12345)]
+
+# Student emails
+student1Emails = [Email('johndoe@example.com', 'Personal')]
+student2Emails = [Email('janesmith@example.com', 'Personal')]
+student3Emails = [Email('bob@example.com', 'Personal'), Email('bwilliam@example.com', 'Work')]
+student4Emails = [Email('samantha@example.com', 'Personal')]
+student5Emails = [Email('davidlee@example.com', 'Personal')]
+
+# Student phones
+student1Phones = [Phone('610-555-1234', 'Mobile')]
+student2Phones = [Phone('610-555-5678', 'Mobile')]
+student3Phones = [Phone('610-555-9012', 'Mobile'), Phone('610-555-3456', 'Work')]
+student4Phones = [Phone('610-555-7890', 'Mobile')]
+student5Phones = [Phone('610-555-2345', 'Mobile')]
+
+# Student birth dates
+student1Birth = Date(1, 1, 2001)
+student2Birth = Date(2, 2, 2002)
+student3Birth = Date(3, 3, 2003)
+student4Birth = Date(4, 4, 2004)
+student5Birth = Date(5, 5, 2005)
+
+# Student acceptance dates
+student1Acceptance = Date(9, 1, 2022)
+student2Acceptance = Date(9, 1, 2022)
+student3Acceptance = Date(15, 1, 2023)
+student4Acceptance = Date(15, 1, 20023)
+student5Acceptance = Date(9, 1, 2022)
+
+# Student semester data
+student1Semester = Semester('Fall', 2022)
+student2Semester = Semester('Fall', 2022)
+student3Semester = Semester('Spring', 2023)
+student4Semester = Semester('Spring', 2023)
+student5Semester = Semester('Fall', 2022)
+
+student_list.append(Student(1, 'John', 'Michael', 'Doe', student1Addresses, student1Emails, student1Phones, student1Birth, student1Acceptance, student1Semester, 'Computer Science'))
+student_list.append(Student(2, 'Jane', '', 'Smith', student2Addresses, student2Emails, student2Phones, student2Birth, student2Acceptance, student2Semester, 'Biology'))
+student_list.append(Student(3, 'Bob', 'William', 'Johnson', student3Addresses, student3Emails, student3Phones, student3Birth, student3Acceptance, student3Semester, 'Psychology'))
+student_list.append(Student(4, 'Samantha', 'M', 'Garcia', student4Addresses, student4Emails, student4Phones, student4Birth, student4Acceptance, student4Semester, 'History'))
+student_list.append(Student(5, 'David', 'J', 'Lee', student5Addresses, student5Emails, student5Phones, student5Birth, student5Acceptance, student5Semester, 'English'))
 
 
 # Print menu options
@@ -160,8 +203,8 @@ def editStudent(): # Edits a students information
             student.set_major(major)
             print('Student information updated!')
             main()
-        if not found:
-            print(f'No student found with ID:{id}')
+    if not found:
+        print(f'No student found with ID:{id}')
         main()  # Return to main menu
 
 def delStudent():
