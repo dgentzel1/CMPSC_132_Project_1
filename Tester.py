@@ -109,8 +109,9 @@ def addStudent():
         address = Address(street, city, state, zip)
         addresses.append(address)
 
-        # TODO add validation
         f1 = int(input('Would you like to enter another address? Enter 1 for yes and 0 for no. '))
+        while f1 != 0 and f1 != 1:
+            f1 = int(input('Would you like to enter another address? Enter 1 for yes and 0 for no. '))
 
     while f2:
         email = input('Student email address: ')
@@ -119,8 +120,9 @@ def addStudent():
         email = Email(email, emailType)
         emails.append(email)
 
-        # TODO add validation
         f2 = int(input('Would you like to enter another email? Enter 1 for yes and 0 for no. '))
+        while f2 != 0 and f2 != 1:
+            f2 = int(input('Would you like to enter another email? Enter 1 for yes and 0 for no. '))
 
     while f3:
         phone = input('Student phone number: ')
@@ -129,8 +131,9 @@ def addStudent():
         phone = Phone(phone, phoneType)
         phones.append(phone)
 
-        # TODO add validation
         f3 = int(input('Would you like to enter another phone? Enter 1 for yes and 0 for no. '))
+        while f3 != 0 and f3 != 1:
+            f3 = int(input('Would you like to enter another phone? Enter 1 for yes and 0 for no. '))
 
     birthDay = int(input('Student day of birth: '))
     birthMonth = int(input('Student month of birth: '))
@@ -208,9 +211,10 @@ def editStudent(): # Edits a students information
         main()  # Return to main menu
 
 def delStudent():
-    # TODO validate both id and option
     id = int(input('Enter the id of student you want to delete: '))
     option = int(input(f'You have selected student id:{id}, confirm deletion? 1 for yes/0 for no: '))
+    while option != 0 and option != 1:
+        option = int(input(f'You have selected student id:{id}, confirm deletion? 1 for yes/0 for no: '))
     if option == 1:
         print(f'Deleting student with id:{id}')
         for i, student in enumerate(student_list):
