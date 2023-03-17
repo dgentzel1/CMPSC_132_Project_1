@@ -29,7 +29,65 @@ class Student:
     def getID(self):
         return self.__id
 
-    # TODO add other getters and setters
+    # Mutator/accessor for First Name
+    def get_fName(self):
+        return self.__fName
+    def set_fName(self, fName):
+        self.__fName = fName
+
+    # Mutator/accessor for Middle Name
+    def get_mName(self):
+        return self.__mName
+    def set_mName(self, mName):
+        self.__mName = mName
+
+    # Mutator/accessor for Last Name
+    def get_lName(self):
+        return self.__lname
+    def set_lName(self, lName):
+        self.__lname = lName
+
+    # Mutator/accessor for address list
+    def get_address_list(self):
+        return self.__address_list
+    def set_address_list(self, addr):
+        self.__address_list = addr
+
+    # Mutator/accessor for email list
+    def get_email_list(self):
+        return self.__email_list
+    def set_email_list(self, email):
+        self.__email_list = email
+
+    # Mutator/accessor for phone_list
+    def get_phone_list(self):
+        return self.__phone_list
+    def set_phone_list(self, phone):
+        self.__phone_list = phone
+
+    # Mutator/accessor for birth_date
+    def get_birth_date(self):
+        return self.__birth_date
+    def set_birth_date(self, birthdate):
+        self.__birth_date = birthdate
+
+    # Mutator/accessor for acceptance
+    def get_acceptance(self):
+        return self.__acceptance
+    def set_acceptance(self, acceptance):
+        self.__acceptance = acceptance
+
+    # Mutator/accessor for semester
+    def get_semester(self):
+        return self.__semester
+    def set_semester(self, semester):
+        self.__semester = semester
+
+    # Mutator/accessor for major
+    def get_major(self):
+        return self.__major
+    def set_major(self, major):
+        self.__major = major
 
     # Display student information
     def __str__(self):
