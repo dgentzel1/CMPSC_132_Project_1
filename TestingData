@@ -2,12 +2,169 @@ All possible Test Cases
 
 
 Menu Options (Correct inputs)
-Option 1 (Populate and add a student to the list visa keyboard)
+---------Option 1 (Populate and add a student to the list visa keyboard)------
 
-Option 2 (Edit an existing student in via keyboard)
+"C:\Program Files\Python310\python.exe" C:\Users\cgdan\PycharmProjects\CMPSC_132_Project\Tester.py
+This program will allow users to add, edit, search, and remove student information.
 
-Option 3 (Delete a student in the list via keyboard)
 
-Option 4 (Display a requested student in the list via keyboard)
+ Please type the corresponding number for the operation that you would like to perform.
 
-Option 5 (Exit the application)
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Exit
+
+    1
+Student ID: 6
+Student first name: Joe
+Student middle name: M.
+Student last name: Johnson
+Student street address: 123 Main St
+Student city: Lititz
+Student state: PA
+Student zip code: 17543
+Would you like to enter another address? Enter 1 for yes and 0 for no. 1
+Student street address: 321 Barney St
+Student city: Pinesville
+Student state: Florida
+Student zip code: 34102
+Would you like to enter another address? Enter 1 for yes and 0 for no. 0
+Student email address: joejohnson@gmail.com
+Student email type: Personal
+Would you like to enter another email? Enter 1 for yes and 0 for no. 1
+Student email address: joejohnson@outlook.com
+Student email type: Work
+Would you like to enter another email? Enter 1 for yes and 0 for no. 0
+Student phone number: 1234567890
+Student phone type: Mobile
+Would you like to enter another phone? Enter 1 for yes and 0 for no. 1
+Student phone number: 0987654321
+Student phone type: Work
+Would you like to enter another phone? Enter 1 for yes and 0 for no. 0
+Student day of birth: 1
+Student month of birth: 1
+Student year of birth: 2000
+Student day of acceptance: 3
+Student month of acceptance: 3
+Student year of acceptance: 2020
+Student semester: Fall
+Student term year: 2020
+Student intended major: Computer Science
+
+   ---------Option 2 (Edit an existing student in via keyboard)---------
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Exit
+
+    2
+Please enter the student ID that you want to manipulate: 6
+Checking student with ID:1
+Checking student with ID:2
+Checking student with ID:3
+Checking student with ID:4
+Checking student with ID:5
+Checking student with ID:6
+
+ID: 6
+Name: Joe M. Johnson
+Addresses: 123 Main St, Lititz, PA 17543, 321 Barney St, Pinesville, Florida 34102
+Emails: joejohnson@gmail.com (Personal), joejohnson@outlook.com (Work)
+Phones: 1234567890 (Mobile), 0987654321 (Work)
+Birth date: 1/1/2000
+Acceptance date: 3/3/2020
+Semester: Fall 2020
+Intended major: Computer Science
+
+Please enter new information. Leave blank to keep the previous information.
+First name (Joe): Joe
+Middle name (M.): M.
+Last name (Johnson): Johnson
+Street (123 Main St): 123 Main St.
+City (Lititz): Lititz
+State (PA): PA
+Zip code (17543): 17543
+Street (321 Barney St): 321 Barney St.
+City (Pinesville): Pinesville
+State (Florida): Florida
+Zip code (34102): 34102
+Email (joejohnson@gmail.com): joejohnson@gmail.com
+Type (Personal): Personal
+Email (joejohnson@outlook.com): joejohnson@outlook.com
+Type (Work): Work
+Phone (1234567890): 1234567890
+Type (Mobile): Mobile
+Phone (0987654321): 0987654321
+Type (Work): Work
+Day of birth (1): 1
+Month of birth (1): 1
+Year of birth (2000): 2000
+Day of acceptance (3): 3
+Month of acceptance (3): 3
+Year of acceptance (2020): 2020
+Term (Fall): Fall
+Year (2020): 2020
+Major (Computer Science): Rizzology
+Student information updated!
+
+    --------Option 3 (Delete a student in the list via keyboard)-------
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Exit
+
+    3
+Enter the id of student you want to delete: 3
+You have selected student id:3, confirm deletion? 1 for yes/0 for no: 1
+Deleting student with id:3
+Student with id 3 has been deleted.
+
+    --------Option 4 (Display a requested student in the list via keyboard)-------
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Exit
+
+    4
+Enter ID of student for display: 6
+Searching for student with ID:6
+Checking student with ID:1
+Checking student with ID:2
+Checking student with ID:4
+Checking student with ID:5
+Checking student with ID:6
+
+ID: 6
+Name: Joe M. Johnson
+Addresses: 123 Main St., Lititz, PA 17543, 321 Barney St., Pinesville, Florida 34102
+Emails: joejohnson@gmail.com (Personal), joejohnson@outlook.com (Work)
+Phones: 1234567890 (Mobile), 0987654321 (Work)
+Birth date: 1/1/2000
+Acceptance date: 3/3/2020
+Semester: Fall 2020
+Intended major: Rizzology
+
+---------Option 5 (Exit the application)--------
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Exit
+
+    5
+
+Process finished with exit code 0
