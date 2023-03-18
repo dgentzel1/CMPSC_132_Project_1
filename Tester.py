@@ -63,6 +63,7 @@ student3Semester = Semester('Spring', 2023)
 student4Semester = Semester('Spring', 2023)
 student5Semester = Semester('Fall', 2022)
 
+# Create students
 student_list.append(Student(1, 'John', 'Michael', 'Doe', student1Addresses, student1Emails, student1Phones, student1Birth, student1Acceptance, student1Semester, 'Computer Science'))
 student_list.append(Student(2, 'Jane', '', 'Smith', student2Addresses, student2Emails, student2Phones, student2Birth, student2Acceptance, student2Semester, 'Biology'))
 student_list.append(Student(3, 'Bob', 'William', 'Johnson', student3Addresses, student3Emails, student3Phones, student3Birth, student3Acceptance, student3Semester, 'Psychology'))
@@ -100,6 +101,7 @@ def addStudent():
     mName = input('Student middle name: ')
     lName = input('Student last name: ')
 
+    # Get address information
     while f1:
         street = input('Student street address: ')
         city = input('Student city: ')
@@ -109,10 +111,12 @@ def addStudent():
         address = Address(street, city, state, zip)
         addresses.append(address)
 
+        # Ask if user wants to add another address and validate
         f1 = int(input('Would you like to enter another address? Enter 1 for yes and 0 for no. '))
         while f1 != 0 and f1 != 1:
             f1 = int(input('Would you like to enter another address? Enter 1 for yes and 0 for no. '))
 
+    # Get email information
     while f2:
         email = input('Student email address: ')
         emailType = input('Student email type: ')
@@ -120,10 +124,12 @@ def addStudent():
         email = Email(email, emailType)
         emails.append(email)
 
+        # Ask if user wants to add another email and validate
         f2 = int(input('Would you like to enter another email? Enter 1 for yes and 0 for no. '))
         while f2 != 0 and f2 != 1:
             f2 = int(input('Would you like to enter another email? Enter 1 for yes and 0 for no. '))
 
+    # Get phone information
     while f3:
         phone = input('Student phone number: ')
         phoneType = input('Student phone type: ')
@@ -131,6 +137,7 @@ def addStudent():
         phone = Phone(phone, phoneType)
         phones.append(phone)
 
+        # Ask if user wants to add another phone and validate
         f3 = int(input('Would you like to enter another phone? Enter 1 for yes and 0 for no. '))
         while f3 != 0 and f3 != 1:
             f3 = int(input('Would you like to enter another phone? Enter 1 for yes and 0 for no. '))
@@ -162,6 +169,7 @@ def addStudent():
 
 # Edit student in list
 def editStudent(): # Edits a students information
+
     id = int(input('Please enter the student ID that you want to manipulate: '))
     found = False
     for student in student_list:
@@ -173,24 +181,44 @@ def editStudent(): # Edits a students information
             fName = input(f'First name ({student.get_fName()}): ') or student.get_fName()
             mName = input(f'Middle name ({student.get_mName()}): ') or student.get_mName()
             lName = input(f'Last name ({student.get_lName()}): ') or student.get_lName()
-            addresses = input(f'Addresses ({", ".join(str(i) for i in student.get_address_list())}): ')
-            if not addresses:
-                addresses = student.get_address_list()
-            else:
-                addresses = [address.strip() for address in addresses.split(',')]
-            emails = input(f'Emails ({", ".join(str(i) for i in student.get_email_list())}): ')
-            if not emails:
-                emails = student.get_email_list()
-            else:
-                emails = [email.strip() for email in emails.split(',')]
-            phones = input(f'Phone numbers ({", ".join(str(i) for i in student.get_phone_list())}): ')
-            if not phones:
-                phones = student.get_phone_list()
-            else:
-                phones = [phone.strip() for phone in phones.split(',')]
-            birthDate = input(f'Birth date ({student.get_birth_date()}): ') or student.get_birth_date()
-            acceptanceDate = input(f'Acceptance date ({student.get_acceptance()}): ') or student.get_acceptance()
-            semester = input(f'Semester ({student.get_semester()}): ') or student.get_semester()
+            addresses = []
+
+            for i in student.get_address_list():
+                street = input(f'Street ({i.getStreet()}): ') or i.getStreet()
+                city = input(f'City ({i.getCity()}): ') or i.getCity()
+                state = input(f'State ({i.getState()}): ') or i.getState()
+                zip = int(input(f'Zip code ({i.getZipCode()}): ')) or i.getZipCode()
+                address = Address(street, city, state, zip)
+                addresses.append(address)
+
+            emails = []
+            for i in student.get_email_list():
+                email = input(f'Email ({i.getEmailAddress()}): ') or i.getEmailAddress()
+                type = input(f'Type ({i.getEmailType()}): ') or i.getEmailType()
+                email = Email(email, type)
+                emails.append(email)
+
+            phones = []
+            for i in student.get_phone_list():
+                phone = input(f'Phone ({i.getPhoneNumber()}): ') or i.getPhoneNumber()
+                type = input(f'Type ({i.getPhoneType()}): ') or i.getPhoneType()
+                phone = Phone(phone, type)
+                phones.append(phone)
+
+            birthDay = int(input(f'Day of birth ({student.get_birth_date().getDay()}): ')) or student.get_birth_date().getDay()
+            birthMonth = int(input(f'Month of birth ({student.get_birth_date().getMonth()}): ')) or student.get_birth_date().getMonth()
+            birthYear = int(input(f'Year of birth ({student.get_birth_date().getYear()}): ')) or student.get_birth_date().getYear()
+            birthDate = Date(birthDay, birthMonth, birthYear)
+
+            acceptanceDay = int(input(f'Day of acceptance ({student.get_acceptance().getDay()}): ')) or student.get_acceptance().getDay()
+            acceptanceMonth = int(input(f'Month of acceptance ({student.get_acceptance().getMonth()}): ')) or student.get_acceptance().getMonth()
+            acceptanceYear = int(input(f'Year of acceptance ({student.get_acceptance().getYear()}): ')) or student.get_acceptance().getYear()
+            acceptanceDate = Date(acceptanceDay, acceptanceMonth, acceptanceYear)
+
+            term = input(f'Term ({student.get_semester().getTerm()}): ') or student.get_semester().getTerm()
+            year = int(input(f'Year ({student.get_semester().getYear()}): ')) or student.get_semester().getYear()
+            semester = Semester(term, year)
+
             major = input(f'Major ({student.get_major()}): ') or student.get_major()
 
             # Update student information
@@ -211,10 +239,14 @@ def editStudent(): # Edits a students information
         main()  # Return to main menu
 
 def delStudent():
+
+    # Ask user for ID of student to delete, along with confirmation and validation
     id = int(input('Enter the id of student you want to delete: '))
     option = int(input(f'You have selected student id:{id}, confirm deletion? 1 for yes/0 for no: '))
     while option != 0 and option != 1:
         option = int(input(f'You have selected student id:{id}, confirm deletion? 1 for yes/0 for no: '))
+
+    # Find student and delete information or state that the student was not found
     if option == 1:
         print(f'Deleting student with id:{id}')
         for i, student in enumerate(student_list):
@@ -228,6 +260,7 @@ def delStudent():
         main()
 
 def displayInformation(student_list): # Display student information
+
     # Find student with valid ID
     studID = int(input('Enter ID of student for display: '))
     print(f"Searching for student with ID:{studID}")
