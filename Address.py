@@ -8,11 +8,12 @@
 class Address:
 
     # Constructor
-    def __init__(self, street='Street', city='City', state='ST', zipcode='*****'):
+    def __init__(self, street='Street', city='City', state='ST', zipcode='*****', type='(Type'):
         self.__strNo = street
         self.__city = city
         self.__state = state
         self.__zipcode = zipcode
+        self.__type = type
 
     # Street mutator
     def setStreet(self, street):
@@ -46,6 +47,14 @@ class Address:
     def getZipCode(self):
         return self.__zipcode
 
+    # Type accessor
+    def setType(self, type):
+        self.__type = type
+
+    # Type mutator
+    def getType(self):
+        return self.__type
+
     # Display address information
     def __str__(self):
-        return f'{self.__strNo}, {self.__city}, {self.__state} {self.__zipcode}'
+        return f'{self.__strNo}, {self.__city}, {self.__state} {self.__zipcode} ({self.__type})'

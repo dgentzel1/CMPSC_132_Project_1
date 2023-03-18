@@ -107,8 +107,9 @@ def addStudent():
         city = input('Student city: ')
         state = input('Student state: ')
         zip = input('Student zip code: ')
+        type = input('Student address type: ')
 
-        address = Address(street, city, state, zip)
+        address = Address(street, city, state, zip, type)
         addresses.append(address)
 
         # Ask if user wants to add another address and validate
@@ -188,7 +189,8 @@ def editStudent(): # Edits a students information
                 city = input(f'City ({i.getCity()}): ') or i.getCity()
                 state = input(f'State ({i.getState()}): ') or i.getState()
                 zip = int(input(f'Zip code ({i.getZipCode()}): ')) or i.getZipCode()
-                address = Address(street, city, state, zip)
+                type = input(f'Type ({i.getType()}): ') or i.getType()
+                address = Address(street, city, state, zip, type)
                 addresses.append(address)
 
             emails = []
