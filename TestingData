@@ -25,11 +25,13 @@ Student street address: 123 Main St
 Student city: Lititz
 Student state: PA
 Student zip code: 17543
+Student address Type: Home
 Would you like to enter another address? Enter 1 for yes and 0 for no. 1
 Student street address: 321 Barney St
 Student city: Pinesville
 Student state: Florida
 Student zip code: 34102
+Student address Type: Home
 Would you like to enter another address? Enter 1 for yes and 0 for no. 0
 Student email address: joejohnson@gmail.com
 Student email type: Personal
@@ -89,10 +91,12 @@ Street (123 Main St): 123 Main St.
 City (Lititz): Lititz
 State (PA): PA
 Zip code (17543): 17543
+Type: Personal
 Street (321 Barney St): 321 Barney St.
 City (Pinesville): Pinesville
 State (Florida): Florida
 Zip code (34102): 34102
+Type: Personal
 Email (joejohnson@gmail.com): joejohnson@gmail.com
 Type (Personal): Personal
 Email (joejohnson@outlook.com): joejohnson@outlook.com
