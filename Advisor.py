@@ -1,19 +1,26 @@
 # Name: Christian Ankney and David Gentzel
 # Course: CMPSC 132
 # File Name: Advisor.py
-# Date: 4/1/23
+# Date: 4/30/23
 #
 # Short Description: Store Advisor information
 
+# Node class for linkedlist
 class Node:
+
+    # Constructor
     def __init__(self, data):
         self.data = data
         self.next = None
 
+# Linkedlist class for managing nodes
 class LinkedList:
+
+    # Constructor
     def __init__(self):
         self.head = None
 
+    # Add student to linkedlist
     def add_student(self, student):
         new_node = Node(student)
         if not self.head:
@@ -25,59 +32,74 @@ class LinkedList:
             current.next = new_node
 
 class Advisor:
+
+    # Constructor
     def __init__(self, fName, mName, lName, title, department, advisee):
-        self.firstName = fName
-        self.middleName = mName
-        self.lastName = lName
-        self.title = title
-        self.department = department
-        self.advisee = LinkedList()
+        self.__firstName = fName
+        self.__middleName = mName
+        self.__lastName = lName
+        self.__title = title
+        self.__department = department
+        self.__advisee = LinkedList()
         if advisee:
             for student in advisee:
-                self.advisee.add_student(student)
+                self.__advisee.add_student(student)
 
+    # First name mutator
     def setFirstName(self, fName):
-        self.firstName = fName
+        self.__firstName = fName
 
+    # First name accessor
     def getFirstName(self):
-        return self.firstName
+        return self.__firstName
 
+    # Middle name mutator
     def setMiddleName(self, mName):
-        self.middleName = mName
+        self.__middleName = mName
 
+    # Middle name accessor
     def getMiddleName(self):
-        return self.middleName
+        return self.__middleName
 
+    # Last name mutator
     def setLastName(self, lName):
-        self.lastName = lName
+        self.__lastName = lName
 
+    # Last name accessor
     def getLastName(self):
-        return self.lastName
+        return self.__lastName
 
+    # Title mutator
     def setTitle(self, title):
-        self.title = title
+        self.__title = title
 
+    # Title accessor
     def getTitle(self):
-        return self.title
+        return self.__title
 
+    # Department mutator
     def setDepartment(self, department):
-        self.department = department
+        self.__department = department
 
+    # Department accessor
     def getDepartment(self):
-        return self.department
+        return self.__department
 
+    # Advisee mutator
     def setAdvisee(self, advisee):
-        self.advisee = LinkedList()
+        self.__advisee = LinkedList()
         if advisee:
             for student in advisee:
-                self.advisee.add_student(student)
+                self.__advisee.add_student(student)
 
+    # Advisee accessor
     def getAdvisee(self):
-        return self.advisee
+        return self.__advisee
 
+    # Print advisor information
     def __str__(self):
-        result = f"{self.title} {self.firstName} {self.middleName} {self.lastName}\nDepartment: {self.department}\nAdvisee: "
-        current = self.advisee.head
+        result = f"{self.__title} {self.__firstName} {self.__middleName} {self.__lastName}\nDepartment: {self.__department}\nAdvisee: "
+        current = self.__advisee.head
         while current:
             result += f'{current.data.firstName} {current.data.lastName}, '
             current = current.next

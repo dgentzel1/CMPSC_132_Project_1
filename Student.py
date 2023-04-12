@@ -1,14 +1,41 @@
 # Name: Christian Ankney and David Gentzel
 # Course: CMPSC 132
 # File Name: Student.py
-# Date: 3/17/23
+# Date: 4/30/23
 #
 # Short Description: Store and display student information
+
+# Node class for linkedlist
+class Node:
+
+    # Constructor
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Linkedlist class for managing nodes
+class LinkedList:
+
+    # Constructor
+    def __init__(self):
+        self.head = None
+
+    # Add course to linkedlist
+    def add_course(self, course):
+        new_node = Node(course)
+        if not self.head:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+
 
 class Student:
 
     # Constructor
-    def __init__(self, id=0, fName='', mName='', lName='', addr=[], email=[], phone=[], birthdate=None, acceptance=None, semester=None, major=''):
+    def __init__(self, id=0, fName='', mName='', lName='', addr=[], email=[], phone=[], birthdate=None, acceptance=None, semester=None, major='', course=None):
         self.__id = id
         self.__fName = fName
         self.__mName = mName
@@ -20,6 +47,10 @@ class Student:
         self.__acceptance = acceptance
         self.__semester = semester
         self.__major = major
+        self.__course_list = LinkedList()
+        if course:
+            for i in course:
+                self.__course_list.add_course(i)
 
     # ID mutator
     def setID(self, ID):
@@ -88,6 +119,15 @@ class Student:
         return self.__major
     def set_major(self, major):
         self.__major = major
+
+    def setCourse(self, course):
+        self.__course = LinkedList()
+        if course:
+            for i in course:
+                self.__course.add_student(i)
+
+    def getAdvisee(self):
+        return self.advisee
 
     # Display student information
     def __str__(self):
