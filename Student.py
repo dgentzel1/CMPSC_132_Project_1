@@ -6,31 +6,8 @@
 # Short Description: Store and display student information
 
 # Node class for linkedlist
-class Node:
 
-    # Constructor
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-# Linkedlist class for managing nodes
-class LinkedList:
-
-    # Constructor
-    def __init__(self):
-        self.head = None
-
-    # Add course to linkedlist
-    def add_course(self, course):
-        new_node = Node(course)
-        if not self.head:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = new_node
-
+from LinkedList import LinkedList
 
 class Student:
 
@@ -48,9 +25,6 @@ class Student:
         self.__semester = semester
         self.__major = major
         self.__course_list = LinkedList()
-        if course:
-            for i in course:
-                self.__course_list.add_course(i)
 
     # ID mutator
     def setID(self, ID):
@@ -124,10 +98,10 @@ class Student:
         self.__course = LinkedList()
         if course:
             for i in course:
-                self.__course.add_student(i)
+                self.__course.append(i)
 
-    def getAdvisee(self):
-        return self.advisee
+    def getCourse(self):
+        return self.__course
 
     # Display student information
     def __str__(self):

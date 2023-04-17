@@ -6,30 +6,8 @@
 # Short Description: Store Advisor information
 
 # Node class for linkedlist
-class Node:
 
-    # Constructor
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
-# Linkedlist class for managing nodes
-class LinkedList:
-
-    # Constructor
-    def __init__(self):
-        self.head = None
-
-    # Add student to linkedlist
-    def add_student(self, student):
-        new_node = Node(student)
-        if not self.head:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = new_node
+from LinkedList import LinkedList
 
 class Advisor:
 
@@ -41,9 +19,6 @@ class Advisor:
         self.__title = title
         self.__department = department
         self.__advisee = LinkedList()
-        if advisee:
-            for student in advisee:
-                self.__advisee.add_student(student)
 
     # First name mutator
     def setFirstName(self, fName):
@@ -90,7 +65,7 @@ class Advisor:
         self.__advisee = LinkedList()
         if advisee:
             for student in advisee:
-                self.__advisee.add_student(student)
+                self.__advisee.append(student)
 
     # Advisee accessor
     def getAdvisee(self):

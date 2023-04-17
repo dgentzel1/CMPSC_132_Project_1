@@ -12,12 +12,22 @@ from Email import Email
 from Phone import Phone
 from Semester import Semester
 from Student import Student
+from Advisor import Advisor
+from LinkedList import LinkedList
+from Course import Course
 
 # Program output description
 print('This program will allow users to add, edit, search, and remove student information.')
 
 # Create student list
-student_list = []
+student_list = LinkedList()
+
+# Student courses
+student1Courses = LinkedList()
+student2Courses = LinkedList()
+student3Courses = LinkedList()
+student4Courses = LinkedList()
+student5Courses = LinkedList()
 
 # Populate with 5 example students
 
@@ -63,13 +73,61 @@ student3Semester = Semester('Spring', 2023)
 student4Semester = Semester('Spring', 2023)
 student5Semester = Semester('Fall', 2022)
 
-# Create students
-student_list.append(Student(1, 'John', 'Michael', 'Doe', student1Addresses, student1Emails, student1Phones, student1Birth, student1Acceptance, student1Semester, 'Computer Science'))
-student_list.append(Student(2, 'Jane', '', 'Smith', student2Addresses, student2Emails, student2Phones, student2Birth, student2Acceptance, student2Semester, 'Biology'))
-student_list.append(Student(3, 'Bob', 'William', 'Johnson', student3Addresses, student3Emails, student3Phones, student3Birth, student3Acceptance, student3Semester, 'Psychology'))
-student_list.append(Student(4, 'Samantha', 'M', 'Garcia', student4Addresses, student4Emails, student4Phones, student4Birth, student4Acceptance, student4Semester, 'History'))
-student_list.append(Student(5, 'David', 'J', 'Lee', student5Addresses, student5Emails, student5Phones, student5Birth, student5Acceptance, student5Semester, 'English'))
+# Student course data
+student1Course1 = Course('CMPSC 132', 'Spring', 'In Person', 'IP', 'N/A')
+student1Course2 = Course('MATH 140', 'Fall', 'Online', 'Completed', 'A')
+student1Course3 = Course('CMPSC 221', 'Spring', 'In Person', 'IP', 'N/A')
 
+student1Courses.append(student1Course1)
+student1Courses.append(student1Course2)
+student1Courses.append(student1Course3)
+
+student2Course1 = Course('BBH 221', 'Fall', 'In Person', 'Completed', 'B')
+student2Course2 = Course('MATH 141', 'Spring', 'Online', 'Completed', 'A')
+student2Course3 = Course('CMPSC 360', 'Spring', 'In Person', 'IP', 'N/A')
+
+student2Courses.append(student2Course1)
+student2Courses.append(student2Course2)
+student2Courses.append(student2Course3)
+
+student3Course1 = Course('EE 210', 'Spring', 'In Person', 'IP', 'N/A')
+student3Course2 = Course('MATH 140', 'Summer', 'Online', 'Completed', 'C')
+student3Course3 = Course('Music 5', 'Fall', 'Hybrid', 'Dropped', 'N/A')
+
+student3Courses.append(student3Course1)
+student3Courses.append(student3Course2)
+student3Courses.append(student3Course3)
+
+student4Course1 = Course('MATH 230', 'Spring', 'In Person', 'IP', 'D')
+student4Course2 = Course('MATH 220', 'Fall', 'Online', 'IP', 'A')
+student4Course3 = Course('ART 20', 'Spring', 'In Person', 'IP', 'C')
+
+student4Courses.append(student4Course1)
+student4Courses.append(student4Course2)
+student4Courses.append(student4Course3)
+
+student5Course1 = Course('PHYS 211', 'Spring', 'In Person', 'Dropped', 'N/A')
+student5Course2 = Course('EMCH 211', 'Fall', 'Online', 'Completed', 'A')
+student5Course3 = Course('MATH 140', 'Spring', 'In Person', 'IP', 'A')
+
+student5Courses.append(student5Course1)
+student5Courses.append(student5Course2)
+student5Courses.append(student5Course3)
+
+# Create students
+student1 = Student(1, 'John', 'Michael', 'Doe', student1Addresses, student1Emails, student1Phones, student1Birth, student1Acceptance, student1Semester, 'Computer Science', student1Courses)
+student2 = Student(2, 'Jane', '', 'Smith', student2Addresses, student2Emails, student2Phones, student2Birth, student2Acceptance, student2Semester, 'Biology', student2Courses)
+student3 = Student(3, 'Bob', 'William', 'Johnson', student3Addresses, student3Emails, student3Phones, student3Birth, student3Acceptance, student3Semester, 'Psychology', student3Courses)
+student4 = Student(4, 'Samantha', 'M', 'Garcia', student4Addresses, student4Emails, student4Phones, student4Birth, student4Acceptance, student4Semester, 'History', student4Courses)
+student5 = Student(5, 'David', 'J', 'Lee', student5Addresses, student5Emails, student5Phones, student5Birth, student5Acceptance, student5Semester, 'English', student5Courses)
+
+student_list.append(student1)
+student_list.append(student2)
+student_list.append(student3)
+student_list.append(student4)
+student_list.append(student5)
+
+advisor = Advisor('Charles', 'X', 'Helou', 'Advisor', 'Mathematics', student_list)
 
 # Print menu options
 def printMenu():
@@ -80,7 +138,22 @@ def printMenu():
     2 - Edit student in list
     3 - Delete student from list
     4 - Display information for a student
-    5 - Exit\n
+    5 - Navigate to advisor menu
+    6 - Exit\n
+    '''))
+
+    return choice
+
+def printAdvisorMenu():
+    choice = int(input('''
+    \n Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add an advisor
+    2 - Display advisor's information with student information
+    3 - Edit advisor's information
+    4 - Remove student
+    5 - Display only advisor's information
+    6 - Exit\n
     '''))
 
     return choice
@@ -274,11 +347,45 @@ def displayInformation(student_list): # Display student information
     print(f'No student found with ID:{studID}')
     main() # Return to main menu
 
+def addAdvisor():
+    pass
+
+def displayAdvisorAll():
+    pass
+
+def editAdvisor():
+    pass
+
+def removeStudent():
+    pass
+
+def displayAdvisor():
+    pass
+
+def advisorOptions():
+
+    choice = printAdvisorMenu()
+
+    if choice < 1 or choice > 6:  # Validate valid choice
+        main()
+    elif choice == 1:  # Add student information
+        addAdvisor()
+    elif choice == 2:  # Edit student information
+        displayAdvisorAll()
+    elif choice == 3:  # Delete student information
+        editAdvisor()
+    elif choice == 4:  # Display student information
+        removeStudent()
+    elif choice == 5:
+        displayAdvisor()
+    else:
+        main() # Exit program
+
 def main():
 
     choice = printMenu()
 
-    if choice < 1 or choice > 5:  # Validate valid choice
+    if choice < 1 or choice > 6:  # Validate valid choice
         main()
     elif choice == 1:  # Add student information
         addStudent()
@@ -288,6 +395,8 @@ def main():
         delStudent()
     elif choice == 4:  # Display student information
         displayInformation(student_list)
+    elif choice == 5:
+        advisorOptions()
     else:
         pass # Exit program
 
