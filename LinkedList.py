@@ -17,8 +17,10 @@ class LinkedList:
         new_node = Node(value)
         if not self.head:
             self.head = new_node
+            print('Node appended! 1')
         else:
             current = self.head
             while current.next:
                 current = current.next
             current.next = new_node
+            print('Node appended! 2')

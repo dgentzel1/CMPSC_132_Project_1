@@ -164,10 +164,12 @@ def addStudent():
     f1 = 1
     f2 = 1
     f3 = 1
+    f4 = 1
 
     addresses = []
     emails = []
     phones = []
+    courses = LinkedList()
 
     id = int(input('Student ID: '))
     fName = input('Student first name: ')
@@ -216,6 +218,33 @@ def addStudent():
         while f3 != 0 and f3 != 1:
             f3 = int(input('Would you like to enter another phone? Enter 1 for yes and 0 for no. '))
 
+    # Get course information
+    while f4:
+        courseNumber = input('Enter course number: ')
+        courseSemester = input('Enter course semester: ')
+        courseDelivery = input('Please enter delivery method (In Person, Online, or Hybrid): ')
+
+        while courseDelivery != 'In Person' and courseDelivery != 'Online' and courseDelivery != 'Hybrid':
+            courseDelivery = input('Please enter one of the three options: ')
+
+        courseStatus = input('Please enter course status (IP, Completed, or Dropped): ')
+
+        while courseStatus != 'IP' and courseStatus != 'Completed' and courseStatus != 'Dropped':
+            courseStatus = input('Please enter one of the three options: ')
+
+        courseGrade = input('Enter grade: ')
+
+        while courseGrade != 'A' and courseGrade != 'B' and courseGrade != 'C' and courseGrade != 'D' and courseGrade != 'F' and courseGrade != 'N/A':
+            courseGrade = input('Please enter a valid grade: ')
+
+        course = Course(courseNumber, courseSemester, courseDelivery, courseStatus, courseGrade)
+        courses.append(course)
+
+        # Ask if user wants to add another course
+        f4 = int(input('Would you like to enter another course? Enter 1 for yes and 0 for no. '))
+        while f4 != 0 and f4 != 1:
+            f4 = int(input('Would you like to enter another course? Enter 1 for yes and 0 for no. '))
+
     birthDay = int(input('Student day of birth: '))
     birthMonth = int(input('Student month of birth: '))
     birthYear = int(input('Student year of birth: '))
@@ -233,7 +262,7 @@ def addStudent():
     semester = Semester(term, termYear)
 
     # Student creation
-    student = Student(id, fName, mName, lName, addresses, emails, phones, birthday, acceptanceDate, semester, major)
+    student = Student(id, fName, mName, lName, addresses, emails, phones, birthday, acceptanceDate, semester, major, courses)
 
     # Add student to list
     student_list.append(student)
@@ -338,14 +367,20 @@ def displayInformation(student_list): # Display student information
 
     # Find student with valid ID
     studID = int(input('Enter ID of student for display: '))
-    print(f"Searching for student with ID:{studID}")
-    for student in student_list:
-        print(f"Checking student with ID:{student.getID()}")
-        if student.getID() == studID:
-            print(str(student)) # Print student information
-            main() # Return to main menu
-    print(f'No student found with ID:{studID}')
-    main() # Return to main menu
+    print(f"Searching for student with ID: {studID}")
+
+    if not student_list:
+        print('There are no students to display.')
+    else:
+        student = student_list.head
+        while student:
+            if student.getData().getID() == studID:
+                print(student)
+                main()
+            student = student.next
+
+        print(f'No student found with ID:{studID}')
+        main()  # Return to main menu
 
 def addAdvisor():
     pass
@@ -368,18 +403,18 @@ def advisorOptions():
 
     if choice < 1 or choice > 6:  # Validate valid choice
         main()
-    elif choice == 1:  # Add student information
+    elif choice == 1:  # Add advisor
         addAdvisor()
-    elif choice == 2:  # Edit student information
+    elif choice == 2:  # Display advisors with stdudent information
         displayAdvisorAll()
-    elif choice == 3:  # Delete student information
+    elif choice == 3:  # Edit advisor
         editAdvisor()
-    elif choice == 4:  # Display student information
+    elif choice == 4:  # Remove student from advisor
         removeStudent()
-    elif choice == 5:
+    elif choice == 5:  # Display only advisor information
         displayAdvisor()
     else:
-        main() # Exit program
+        main() # Exit menu
 
 def main():
 
@@ -395,7 +430,7 @@ def main():
         delStudent()
     elif choice == 4:  # Display student information
         displayInformation(student_list)
-    elif choice == 5:
+    elif choice == 5:  # Navigate to advisor menu
         advisorOptions()
     else:
         pass # Exit program

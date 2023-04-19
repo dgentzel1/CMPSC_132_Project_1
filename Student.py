@@ -108,6 +108,17 @@ class Student:
         addresses = self.__address_list
         emails = self.__email_list
         phones = self.__phone_list
+        s = ''
+
+        # TODO need to fix this
+        if self.__course_list:
+            c = self.__course_list.head
+            while c:
+                s += c.getData()
+            c = c.next
+        else:
+            s = 'There are no courses to display'
+
         return f'\nID: {self.__id} \n' \
                f'Name: {self.__fName} {self.__mName} {self.__lname} \n' \
                f'Addresses: {", ".join(str(i) for i in addresses)} \n' \
@@ -116,4 +127,5 @@ class Student:
                f'Birth date: {self.__birth_date} \n' \
                f'Acceptance date: {self.__acceptance} \n' \
                f'Semester: {self.__semester} \n' \
-               f'Intended major: {self.__major} \n'
+               f'Intended major: {self.__major} \n' \
+               f'Courses: {s} \n'
