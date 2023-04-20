@@ -12,7 +12,7 @@ from LinkedList import LinkedList
 class Student:
 
     # Constructor
-    def __init__(self, id=0, fName='', mName='', lName='', addr=[], email=[], phone=[], birthdate=None, acceptance=None, semester=None, major='', course=None):
+    def __init__(self, id=0, fName='', mName='', lName='', addr=[], email=[], phone=[], birthdate=None, acceptance=None, semester=None, major='', courses=None):
         self.__id = id
         self.__fName = fName
         self.__mName = mName
@@ -24,7 +24,7 @@ class Student:
         self.__acceptance = acceptance
         self.__semester = semester
         self.__major = major
-        self.__course_list = LinkedList()
+        self.__course_list = courses
 
     # ID mutator
     def setID(self, ID):
@@ -111,13 +111,14 @@ class Student:
         s = ''
 
         # TODO need to fix this
-        if self.__course_list:
+        if not self.__course_list:
+            s = 'There are no courses to display'
+        else:
             c = self.__course_list.head
             while c:
-                s += c.getData()
-            c = c.next
-        else:
-            s = 'There are no courses to display'
+                s += str(f'{c.getData()}\n')
+                print(s)
+                c = c.next
 
         return f'\nID: {self.__id} \n' \
                f'Name: {self.__fName} {self.__mName} {self.__lname} \n' \

@@ -12,13 +12,13 @@ from LinkedList import LinkedList
 class Advisor:
 
     # Constructor
-    def __init__(self, fName, mName, lName, title, department, advisee):
+    def __init__(self, fName, mName, lName, title, department, advisees):
         self.__firstName = fName
         self.__middleName = mName
         self.__lastName = lName
         self.__title = title
         self.__department = department
-        self.__advisee = LinkedList()
+        self.__advisee = advisees
 
     # First name mutator
     def setFirstName(self, fName):

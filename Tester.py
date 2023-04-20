@@ -371,11 +371,12 @@ def displayInformation(student_list): # Display student information
 
     if not student_list:
         print('There are no students to display.')
+        main()
     else:
         student = student_list.head
         while student:
             if student.getData().getID() == studID:
-                print(student)
+                print(student.getData())
                 main()
             student = student.next
 
