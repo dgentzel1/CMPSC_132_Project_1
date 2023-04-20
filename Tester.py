@@ -352,16 +352,20 @@ def delStudent():
 
     # Find student and delete information or state that the student was not found
     if option == 1:
-        print(f'Deleting student with id:{id}')
-        for i, student in enumerate(student_list):
-            if student.getID() == id:
-                del student_list[i]
-                print(f'Student with id {id} has been deleted.')
-                main() # Return to main menu
-        print(f'No student with ID:{id} found, returning to menu.')
-    else:
-        pass
-        main()
+        if not student_list:
+            print('There are no students to display.')
+            main()
+        else:
+            student = student_list.head
+            while student:
+                if student.getData().getID() == id:
+                    student_list.remove(student)
+                    main()
+                student = student.next
+
+            print(f'No student found with ID:{id}')
+            main()  # Return to main menu
+    main()
 
 def displayInformation(student_list): # Display student information
 
@@ -382,6 +386,7 @@ def displayInformation(student_list): # Display student information
 
         print(f'No student found with ID:{studID}')
         main()  # Return to main menu
+    main()
 
 def addAdvisor():
     pass

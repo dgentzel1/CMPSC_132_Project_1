@@ -22,3 +22,24 @@ class LinkedList:
             while current.next:
                 current = current.next
             current.next = new_node
+
+    def remove(self, value):
+        temp = self.head
+
+        if temp:
+            if temp == value:
+                self.head = temp.next
+                temp = None
+                return
+
+        while temp:
+            if temp.getData() == value:
+                break
+            prev = temp
+            temp = temp.next
+
+        if temp == None:
+            return
+
+        prev.next = temp.next
+        temp = None
