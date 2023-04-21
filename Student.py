@@ -95,13 +95,10 @@ class Student:
         self.__major = major
 
     def setCourse(self, course):
-        self.__course = LinkedList()
-        if course:
-            for i in course:
-                self.__course.append(i)
+        self.__course_list = course
 
     def getCourse(self):
-        return self.__course
+        return self.__course_list
 
     # Display student information
     def __str__(self):
@@ -110,7 +107,6 @@ class Student:
         phones = self.__phone_list
         s = ''
 
-        # TODO need to fix this
         if not self.__course_list:
             s = 'There are no courses to display'
         else:
