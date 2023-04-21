@@ -460,7 +460,23 @@ def removeStudent():
     pass
 
 def displayAdvisor():
-    pass
+    # Find advisor with valid name
+    name = input('Enter first and last name of advisor: ')
+    print(f"Searching for advisor: {name}")
+    if not advisor_list:
+        print('There are no advisors to display.')
+    else:
+        advisor = advisor_list.head
+        while advisor:
+            s = advisor.getData().getFirstName() + ' ' + advisor.getData().getLastName()
+            print(s)
+            if s == name:
+                print(advisor.getData().print())
+                main()
+            advisor = advisor.next
+
+        print(f'No advisor found with name: {name}')
+        main()
 
 def advisorOptions():
 
@@ -470,7 +486,7 @@ def advisorOptions():
         main()
     elif choice == 1:  # Add advisor
         addAdvisor()
-    elif choice == 2:  # Display advisors with stdudent information
+    elif choice == 2:  # Display advisors with student information
         displayAdvisorAll(advisor_list)
     elif choice == 3:  # Edit advisor
         editAdvisor()
@@ -498,7 +514,7 @@ def main():
     elif choice == 5:  # Navigate to advisor menu
         advisorOptions()
     elif choice == 6:
-        pass # Exit program
+        pass  # Exit program
 
 if __name__ == '__main__':
     main()

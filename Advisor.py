@@ -68,6 +68,11 @@ class Advisor:
     def getAdvisee(self):
         return self.__advisee
 
+    def print(self):
+        return f"{self.__firstName} {self.__middleName} {self.__lastName}\n" \
+                 f"Department: {self.__title}\n" \
+                 f"Title: {self.__department}\n" \
+
     # Print advisor information
     def __str__(self):
         s = ''
