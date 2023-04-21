@@ -22,6 +22,9 @@ print('This program will allow users to add, edit, search, and remove student in
 # Create student list
 student_list = LinkedList()
 
+# Create advisor list
+advisor_list = LinkedList()
+
 # Student courses
 student1Courses = LinkedList()
 student2Courses = LinkedList()
@@ -128,6 +131,7 @@ student_list.append(student4)
 student_list.append(student5)
 
 advisor = Advisor('Charles', 'X', 'Helou', 'Advisor', 'Mathematics', student_list)
+advisor_list.append(advisor)
 
 # Print menu options
 def printMenu():
@@ -429,8 +433,25 @@ def displayInformation(student_list): # Display student information
 def addAdvisor():
     pass
 
-def displayAdvisorAll():
-    pass
+def displayAdvisorAll(advisor_list):
+
+    # Find advisor with valid name
+    name = input('Enter first and last name of advisor: ')
+    print(f"Searching for advisor: {name}")
+    if not advisor_list:
+        print('There are no advisors to display.')
+    else:
+        advisor = advisor_list.head
+        while advisor:
+            s = advisor.getData().getFirstName() + ' ' + advisor.getData().getLastName()
+            print(s)
+            if s == name:
+                print(advisor.getData())
+                main()
+            advisor = advisor.next
+
+        print(f'No advisor found with name: {name}')
+        main()
 
 def editAdvisor():
     pass
@@ -450,14 +471,14 @@ def advisorOptions():
     elif choice == 1:  # Add advisor
         addAdvisor()
     elif choice == 2:  # Display advisors with stdudent information
-        displayAdvisorAll()
+        displayAdvisorAll(advisor_list)
     elif choice == 3:  # Edit advisor
         editAdvisor()
     elif choice == 4:  # Remove student from advisor
         removeStudent()
     elif choice == 5:  # Display only advisor information
         displayAdvisor()
-    else:
+    elif choice == 6:
         main() # Exit menu
 
 def main():
@@ -476,7 +497,7 @@ def main():
         displayInformation(student_list)
     elif choice == 5:  # Navigate to advisor menu
         advisorOptions()
-    else:
+    elif choice == 6:
         pass # Exit program
 
 if __name__ == '__main__':

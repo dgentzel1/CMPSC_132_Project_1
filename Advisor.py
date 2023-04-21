@@ -62,10 +62,7 @@ class Advisor:
 
     # Advisee mutator
     def setAdvisee(self, advisee):
-        self.__advisee = LinkedList()
-        if advisee:
-            for student in advisee:
-                self.__advisee.append(student)
+        self.__advisee = advisee
 
     # Advisee accessor
     def getAdvisee(self):
@@ -73,9 +70,20 @@ class Advisor:
 
     # Print advisor information
     def __str__(self):
-        result = f"{self.__title} {self.__firstName} {self.__middleName} {self.__lastName}\nDepartment: {self.__department}\nAdvisee: "
-        current = self.__advisee.head
-        while current:
-            result += f'{current.data.firstName} {current.data.lastName}, '
-            current = current.next
-        return result.rstrip(', ')  # Removes the last comma and space for last in linkedList
+        s = ''
+
+        if not self.__advisee:
+            s = 'There are no courses to display'
+        else:
+            c = self.__advisee.head
+            while c:
+                s += str(f'{c.getData()}\n')
+                print(s)
+                c = c.next
+
+        result = f"{self.__title} {self.__firstName} {self.__middleName} {self.__lastName}\n" \
+                 f"Department: {self.__title}\n" \
+                 f"Title: {self.__department}\n" \
+                 f"Advisees: {s} \n"
+
+        return result
