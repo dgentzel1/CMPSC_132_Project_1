@@ -430,7 +430,7 @@ def displayInformation(student_list): # Display student information
         main()  # Return to main menu
     main()
 
-def addAdvisor():
+def addAdvisor(student_list):
     advisees = LinkedList()
 
     f1 = 1
@@ -452,7 +452,7 @@ def addAdvisor():
             specificID = int(input('Is there a specific student you would like to add by ID? Enter 1 for yes and 0 for no: '))
             while specificID != 0 and specificID != 1:
                 specificID = int(input('Is there a specific student you would like to add by ID? Enter 1 for yes and 0 for no: '))
-            # TODO Fix this
+
             if specificID == 1:
                 id = int(input('Please enter the ID: '))
 
@@ -466,7 +466,6 @@ def addAdvisor():
                             advisees.append(student)
                         student = student.next
 
-                    print(f'No student found with ID:{id}')
             else:
                 f1 = 1
                 f2 = 1
@@ -579,6 +578,9 @@ def addAdvisor():
             while f1 != 1 and f1 != 0:
                 f1 = int(input('Would you like to add another advisee? Enter 1 for yes and 0 for no: '))
 
+    advisor = Advisor(fName, mName, lName, title, department, advisees)
+    advisor_list.append(advisor)
+
     main()
 
 def displayAdvisorAll(advisor_list):
@@ -626,14 +628,14 @@ def displayAdvisor():
         print(f'No advisor found with name: {name}')
         main()
 
-def advisorOptions():
+def advisorOptions(student_list):
 
     choice = printAdvisorMenu()
 
     if choice < 1 or choice > 6:  # Validate valid choice
         main()
     elif choice == 1:  # Add advisor
-        addAdvisor()
+        addAdvisor(student_list)
     elif choice == 2:  # Display advisors with student information
         displayAdvisorAll(advisor_list)
     elif choice == 3:  # Edit advisor
@@ -660,7 +662,7 @@ def main():
     elif choice == 4:  # Display student information
         displayInformation(student_list)
     elif choice == 5:  # Navigate to advisor menu
-        advisorOptions()
+        advisorOptions(student_list)
     elif choice == 6:
         pass  # Exit program
 
