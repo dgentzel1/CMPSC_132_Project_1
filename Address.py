@@ -41,7 +41,7 @@ class Address:
 
     # Zipcode mutator
     def setZipCode(self, zc):
-        self.__zipcode
+        self.__zipcode = zc
 
     # Zipcode accessor
     def getZipCode(self):
