@@ -587,6 +587,7 @@ def addAdvisor(student_list):
                 # Add student to list
                 advisees.append(student)
 
+            # Ask if another advisee should be added
             f1 = int(input('Would you like to add another advisee? Enter 1 for yes and 0 for no: '))
             while f1 != 1 and f1 != 0:
                 f1 = int(input('Would you like to add another advisee? Enter 1 for yes and 0 for no: '))
@@ -631,6 +632,8 @@ def editAdvisor():
     if not advisor_list:
         print('There are no advisors to edit.')
     else:
+
+        # Edit advisor data
         advisor = advisor_list.head
         while advisor:
             s = advisor.getData().getFirstName() + ' ' + advisor.getData().getLastName()
@@ -738,12 +741,14 @@ def editAdvisor():
                         print('Student information updated!')
                         advisee = advisee.next
 
+                # Set new advisor data
                 advisor.getData().setFirstName(fName)
                 advisor.getData().setMiddleName(mName)
                 advisor.getData().setLastName(lName)
                 advisor.getData().setTitle(title)
                 advisor.getData().setDepartment(department)
 
+                # Add advisee to advisee linkedlist
                 addAdvisee = int(input('Would you like to add another advisee? Enter 1 for yes ad 0 for no: '))
 
                 while addAdvisee != 0 and addAdvisee != 1:
@@ -859,6 +864,7 @@ def editAdvisor():
                     # Add student to list
                     advisor.getData().getAdvisee().append(student)
 
+                    # Ask if another advisee should be added
                     addAdvisee = int(input('Would you like to add another advisee? Enter 1 for yes and 0 for no: '))
 
                     while addAdvisee != 0 and addAdvisee != 1:
