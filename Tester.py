@@ -21,6 +21,7 @@ print('This program will allow users to add, edit, search, and remove student in
 
 # Create student list
 student_list = LinkedList()
+student_list2 = LinkedList()
 
 # Create advisor list
 advisor_list = LinkedList()
@@ -133,7 +134,10 @@ student_list.append(student5)
 
 # Create advisor and append to linkedlist
 advisor = Advisor('Charles', 'X', 'Helou', 'Advisor', 'Mathematics', student_list)
+advisor1 = Advisor('Eggs', 'Dahmer', 'Benedict', 'Advisor', 'Culanary', student_list2)
+
 advisor_list.append(advisor)
+advisor_list.append(advisor1)
 
 # Print menu options
 def printMenu():
@@ -746,7 +750,34 @@ def editAdvisor(): #TODO Finish this (Auto fill doesn't seem to work)
 
 # Remove student from an advisor's list of students
 def removeStudent():
-    pass
+    # Find advisor with valid name
+    name = input('Enter first and last name of student you wish to delete: ')
+    print(f"Searching for Student: {name}")
+    advisor = advisor_list.head
+
+    # Parse through advisor linkedlist
+    if not advisor.getData().getAdvisee():
+        print('There are no Students to display.')
+    else:
+        student = advisor.getData().getAdvisee().head
+        previous_student = None
+        while student:
+            s = student.getData().get_fName() + ' ' + student.getData().get_lName()
+            print(s)
+            if s == name:
+                print(f'{s} Found!')
+                if previous_student:
+                    # Skip over the node to be deleted
+                    previous_student.next = student.next
+                else:
+                    # The node to be deleted is the head of the list
+                    advisor.getData().getAdvisee().head = student.next
+                    print(f'{s} has been deleted.')
+                main()
+            student = student.next
+
+        print(f'No Student found with name: {name}')
+        main()
 
 # Display advisor without student information
 def displayAdvisor():
