@@ -1,7 +1,7 @@
 # Name: Christian Ankney and David Gentzel
 # Course: CMPSC 132
 # File Name: Semester.py
-# Date: 3/17/23
+# Date: 4/30/23
 #
 # Short Description: Store semester information
 

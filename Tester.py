@@ -1,7 +1,7 @@
 # Name: Christian Ankney and David Gentzel
 # Course: CMPSC 132
 # File Name: Tester.py
-# Date: 3/17/23
+# Date: 4/30/23
 #
 # Short Description: Use menu to access and manipulate students information
 
@@ -124,12 +124,14 @@ student3 = Student(3, 'Bob', 'William', 'Johnson', student3Addresses, student3Em
 student4 = Student(4, 'Samantha', 'M', 'Garcia', student4Addresses, student4Emails, student4Phones, student4Birth, student4Acceptance, student4Semester, 'History', student4Courses)
 student5 = Student(5, 'David', 'J', 'Lee', student5Addresses, student5Emails, student5Phones, student5Birth, student5Acceptance, student5Semester, 'English', student5Courses)
 
+# Append students to linkedlist
 student_list.append(student1)
 student_list.append(student2)
 student_list.append(student3)
 student_list.append(student4)
 student_list.append(student5)
 
+# Create advisor and append to linkedlist
 advisor = Advisor('Charles', 'X', 'Helou', 'Advisor', 'Mathematics', student_list)
 advisor_list.append(advisor)
 
@@ -148,6 +150,7 @@ def printMenu():
 
     return choice
 
+# Print advisor submenu options
 def printAdvisorMenu():
     choice = int(input('''
     \n Please type the corresponding number for the operation that you would like to perform.
@@ -384,6 +387,7 @@ def editStudent(): # Edits a students information
         main()  # Return to main menu
     main()
 
+# Delete student from linkedlist
 def delStudent():
 
     # Ask user for ID of student to delete, along with confirmation and validation
@@ -415,6 +419,7 @@ def displayInformation(student_list): # Display student information
     studID = int(input('Enter ID of student for display: '))
     print(f"Searching for student with ID: {studID}")
 
+    # Parse through student linkedlist
     if not student_list:
         print('There are no students to display.')
         main()
@@ -430,6 +435,7 @@ def displayInformation(student_list): # Display student information
         main()  # Return to main menu
     main()
 
+# Add advisor to advisor linkedlist
 def addAdvisor(student_list):
     advisees = LinkedList()
 
@@ -446,6 +452,7 @@ def addAdvisor(student_list):
     while addAdvisee != 0 and addAdvisee != 1:
         addAdvisee = int(input('Would you like to add an advisee? Enter 1 for yes and 0 for no: '))
 
+    # Add advisee if option is chosen
     if addAdvisee == 1:
 
         while f1:
@@ -453,9 +460,11 @@ def addAdvisor(student_list):
             while specificID != 0 and specificID != 1:
                 specificID = int(input('Is there a specific student you would like to add by ID? Enter 1 for yes and 0 for no: '))
 
+            # Add specific student by ID
             if specificID == 1:
                 id = int(input('Please enter the ID: '))
 
+                # Parse through student linkedlist
                 if not student_list:
                     print('There are no students to display.')
                     main()
@@ -466,6 +475,7 @@ def addAdvisor(student_list):
                             advisees.append(student)
                         student = student.next
 
+            # If no specific ID is chosen, add student manually
             else:
                 f1 = 1
                 f2 = 1
@@ -583,11 +593,14 @@ def addAdvisor(student_list):
 
     main()
 
+# Display advisor with student information
 def displayAdvisorAll(advisor_list):
 
     # Find advisor with valid name
     name = input('Enter first and last name of advisor: ')
     print(f"Searching for advisor: {name}")
+
+    # Parse through linkedlist of advisors
     if not advisor_list:
         print('There are no advisors to display.')
     else:
@@ -603,16 +616,21 @@ def displayAdvisorAll(advisor_list):
         print(f'No advisor found with name: {name}')
         main()
 
+# Edit advisor in advisor linkedlist
 def editAdvisor():
     pass
 
+# Remove student from an advisor's list of students
 def removeStudent():
     pass
 
+# Display advisor without student information
 def displayAdvisor():
     # Find advisor with valid name
     name = input('Enter first and last name of advisor: ')
     print(f"Searching for advisor: {name}")
+
+    # Parse through advisor linkedlist
     if not advisor_list:
         print('There are no advisors to display.')
     else:
@@ -628,6 +646,7 @@ def displayAdvisor():
         print(f'No advisor found with name: {name}')
         main()
 
+# Advisor option menu
 def advisorOptions(student_list):
 
     choice = printAdvisorMenu()
@@ -647,6 +666,7 @@ def advisorOptions(student_list):
     elif choice == 6:
         main() # Exit menu
 
+# Main menu options
 def main():
 
     choice = printMenu()
@@ -666,5 +686,6 @@ def main():
     elif choice == 6:
         pass  # Exit program
 
+# Main function
 if __name__ == '__main__':
     main()

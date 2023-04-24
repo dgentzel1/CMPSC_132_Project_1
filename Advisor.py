@@ -77,6 +77,7 @@ class Advisor:
     def __str__(self):
         s = ''
 
+        # Parse through linkedlist of advisees
         if not self.__advisee:
             s = 'There are no courses to display'
         else:

@@ -7,8 +7,6 @@
 
 # Node class for linkedlist
 
-from LinkedList import LinkedList
-
 class Student:
 
     # Constructor
@@ -107,6 +105,7 @@ class Student:
         phones = self.__phone_list
         s = ''
 
+        # Parse through linkedlist of courses
         if not self.__course_list:
             s = 'There are no courses to display'
         else:

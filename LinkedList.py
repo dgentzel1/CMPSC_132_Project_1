@@ -5,7 +5,9 @@
 #
 # Short Description: Linkedlist ADT
 
+# Import statement
 from Node import Node
+
 class LinkedList:
 
     # Constructor
@@ -23,6 +25,7 @@ class LinkedList:
                 current = current.next
             current.next = new_node
 
+    # Remove student from linkedlist
     def remove(self, value):
         temp = self.head
 
