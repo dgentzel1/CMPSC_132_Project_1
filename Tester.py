@@ -139,10 +139,6 @@ advisor1 = Advisor('Eggs', 'Dahmer', 'Benedict', 'Advisor', 'Culanary', student_
 advisor_list.append(advisor)
 advisor_list.append(advisor1)
 
-advisor_list2 = LinkedList()
-advisor2 = Advisor('Bing', 'B', 'Bong', 'A', 'B', advisor_list2)
-advisor_list.append(advisor2)
-
 # Print menu options
 def printMenu():
     choice = int(input('''
