@@ -135,6 +135,10 @@ student_list.append(student5)
 advisor = Advisor('Charles', 'X', 'Helou', 'Advisor', 'Mathematics', student_list)
 advisor_list.append(advisor)
 
+advisor_list2 = LinkedList()
+advisor2 = Advisor('Bing', 'B', 'Bong', 'A', 'B', advisor_list2)
+advisor_list.append(advisor2)
+
 # Print menu options
 def printMenu():
     choice = int(input('''
@@ -615,7 +619,7 @@ def displayAdvisorAll(advisor_list):
         main()
 
 # Edit advisor in advisor linkedlist
-def editAdvisor(): #TODO Finish this (Auto fill doesn't seem to work)
+def editAdvisor():
 
     newCourses = LinkedList()
 
@@ -734,11 +738,132 @@ def editAdvisor(): #TODO Finish this (Auto fill doesn't seem to work)
                         print('Student information updated!')
                         advisee = advisee.next
 
-            advisor.getData().setFirstName(fName)
-            advisor.getData().setMiddleName(mName)
-            advisor.getData().setLastName(lName)
-            advisor.getData().setTitle(title)
-            advisor.getData().setDepartment(department)
+                advisor.getData().setFirstName(fName)
+                advisor.getData().setMiddleName(mName)
+                advisor.getData().setLastName(lName)
+                advisor.getData().setTitle(title)
+                advisor.getData().setDepartment(department)
+
+                addAdvisee = int(input('Would you like to add another advisee? Enter 1 for yes ad 0 for no: '))
+
+                while addAdvisee != 0 and addAdvisee != 1:
+                    addAdvisee = int(input('Would you like to add another advisee? Enter 1 for yes ad 0 for no: '))
+
+                while addAdvisee == 1:
+                    f1 = 1
+                    f2 = 1
+                    f3 = 1
+                    f4 = 1
+
+                    addresses = []
+                    emails = []
+                    phones = []
+                    courses = LinkedList()
+
+                    id = int(input('Student ID: '))
+                    fName = input('Student first name: ')
+                    mName = input('Student middle name: ')
+                    lName = input('Student last name: ')
+
+                    # Get address information
+                    while f1:
+                        street = input('Student street address: ')
+                        city = input('Student city: ')
+                        state = input('Student state: ')
+                        zip = input('Student zip code: ')
+                        type = input('Student address type: ')
+
+                        address = Address(street, city, state, zip, type)
+                        addresses.append(address)
+
+                        # Ask if user wants to add another address and validate
+                        f1 = int(input('Would you like to enter another address? Enter 1 for yes and 0 for no. '))
+                        while f1 != 0 and f1 != 1:
+                            f1 = int(
+                                input('Would you like to enter another address? Enter 1 for yes and 0 for no. '))
+
+                    # Get email information
+                    while f2:
+                        email = input('Student email address: ')
+                        emailType = input('Student email type: ')
+
+                        email = Email(email, emailType)
+                        emails.append(email)
+
+                        # Ask if user wants to add another email and validate
+                        f2 = int(input('Would you like to enter another email? Enter 1 for yes and 0 for no. '))
+                        while f2 != 0 and f2 != 1:
+                            f2 = int(input('Would you like to enter another email? Enter 1 for yes and 0 for no. '))
+
+                    # Get phone information
+                    while f3:
+                        phone = input('Student phone number: ')
+                        phoneType = input('Student phone type: ')
+
+                        phone = Phone(phone, phoneType)
+                        phones.append(phone)
+
+                        # Ask if user wants to add another phone and validate
+                        f3 = int(input('Would you like to enter another phone? Enter 1 for yes and 0 for no. '))
+                        while f3 != 0 and f3 != 1:
+                            f3 = int(input('Would you like to enter another phone? Enter 1 for yes and 0 for no. '))
+
+                    # Get course information
+                    while f4:
+                        courseNumber = input('Enter course number: ')
+                        courseSemester = input('Enter course semester: ')
+                        courseDelivery = input('Please enter delivery method (In Person, Online, or Hybrid): ')
+
+                        while courseDelivery != 'In Person' and courseDelivery != 'Online' and courseDelivery != 'Hybrid':
+                            courseDelivery = input('Please enter one of the three options: ')
+
+                        courseStatus = input('Please enter course status (IP, Completed, or Dropped): ')
+
+                        while courseStatus != 'IP' and courseStatus != 'Completed' and courseStatus != 'Dropped':
+                            courseStatus = input('Please enter one of the three options: ')
+
+                        courseGrade = input('Enter grade: ')
+
+                        while courseGrade != 'A' and courseGrade != 'B' and courseGrade != 'C' and courseGrade != 'D' and courseGrade != 'F' and courseGrade != 'N/A':
+                            courseGrade = input('Please enter a valid grade: ')
+
+                        course = Course(courseNumber, courseSemester, courseDelivery, courseStatus, courseGrade)
+                        courses.append(course)
+
+                        # Ask if user wants to add another course
+                        f4 = int(input('Would you like to enter another course? Enter 1 for yes and 0 for no. '))
+                        while f4 != 0 and f4 != 1:
+                            f4 = int(
+                                input('Would you like to enter another course? Enter 1 for yes and 0 for no. '))
+
+                    birthDay = int(input('Student day of birth: '))
+                    birthMonth = int(input('Student month of birth: '))
+                    birthYear = int(input('Student year of birth: '))
+
+                    acceptanceDay = int(input('Student day of acceptance: '))
+                    acceptanceMonth = int(input('Student month of acceptance: '))
+                    acceptanceYear = int(input('Student year of acceptance: '))
+
+                    term = input('Student semester: ')
+                    termYear = int(input('Student term year: '))
+                    major = input('Student intended major: ')
+
+                    birthday = Date(birthDay, birthMonth, birthYear)
+                    acceptanceDate = Date(acceptanceDay, acceptanceMonth, acceptanceYear)
+                    semester = Semester(term, termYear)
+
+                    # Student creation
+                    student = Student(id, fName, mName, lName, addresses, emails, phones, birthday, acceptanceDate,
+                                      semester, major, courses)
+
+                    # Add student to list
+                    advisor.getData().getAdvisee().append(student)
+
+                    addAdvisee = int(input('Would you like to add another advisee? Enter 1 for yes and 0 for no: '))
+
+                    while addAdvisee != 0 and addAdvisee != 1:
+                        addAdvisee = int(
+                            input('Would you like to add another advisee? Enter 1 for yes and 0 for no: '))
 
             advisor = advisor.next
 
