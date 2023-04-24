@@ -615,7 +615,7 @@ def displayAdvisorAll(advisor_list):
         main()
 
 # Edit advisor in advisor linkedlist
-def editAdvisor(): #TODO Finish this
+def editAdvisor(): #TODO Finish this (Auto fill doesn't seem to work)
 
     newCourses = LinkedList()
 
@@ -637,102 +637,102 @@ def editAdvisor(): #TODO Finish this
                 title = input(f'Title ({advisor.getData().getTitle()}): ') or advisor.getData().getTitle()
                 department = input(f'Department ({advisor.getData().getDepartment()}): ') or advisor.getData().getDepartment()
 
-                # if not advisor.getData().getAdvisee():
-                #     print('There are no students to display')
-                # else:
-                #     advisee = advisor.getData().getAdvisee().head
-                #     while advisee:
-                #         s = advisee.getData()
-                #         found = True
-                #         print(str(advisee))  # Prints student information
-                #         print('Please enter new information. Leave blank to keep the previous information.')
-                #         fName = input(f'First name ({s.get_fName()}): ') or s.get_fName()
-                #         mName = input(f'Middle name ({s.get_mName()}): ') or s.get_mName()
-                #         lName = input(f'Last name ({s.get_lName()}): ') or s.get_lName()
-                #         addresses = []
-                #
-                #         for i in s.get_address_list():
-                #             street = input(f'Street ({i.getStreet()}): ') or i.getStreet()
-                #             city = input(f'City ({i.getCity()}): ') or i.getCity()
-                #             state = input(f'State ({i.getState()}): ') or i.getState()
-                #             zip = int(input(f'Zip code ({i.getZipCode()}): ')) or i.getZipCode()
-                #             type = input(f'Type ({i.getType()}): ') or i.getType()
-                #             address = Address(street, city, state, zip, type)
-                #             addresses.append(address)
-                #
-                #         emails = []
-                #         for i in s.get_email_list():
-                #             email = input(f'Email ({i.getEmailAddress()}): ') or i.getEmailAddress()
-                #             type = input(f'Type ({i.getEmailType()}): ') or i.getEmailType()
-                #             email = Email(email, type)
-                #             emails.append(email)
-                #
-                #         phones = []
-                #         for i in s.get_phone_list():
-                #             phone = input(f'Phone ({i.getPhoneNumber()}): ') or i.getPhoneNumber()
-                #             type = input(f'Type ({i.getPhoneType()}): ') or i.getPhoneType()
-                #             phone = Phone(phone, type)
-                #             phones.append(phone)
-                #
-                #         if s.getCourse():
-                #             a = s.getCourse().head
-                #             while a:
-                #                 number = input(
-                #                     f'Course number ({a.getData().getNumber()}): ') or a.getData().getNumber()
-                #                 semester = input(
-                #                     f'Semester ({a.getData().getSemester()}): ') or a.getData().getSemester()
-                #                 delivery = input(
-                #                     f'Delivery ({a.getData().getDelivery()}): ') or a.getData().getDelivery()
-                #                 while delivery != 'In Person' and delivery != 'Online' and delivery != 'Hybrid':
-                #                     delivery = input('Please enter In Person, Hybrid, or Online. ')
-                #                 status = input(f'Status ({a.getData().getStatus()}): ') or a.getData().getStatus()
-                #                 while status != 'IP' and status != 'Completed' and status != 'Dropped':
-                #                     status = input('Please enter IP, Completed, or Dropped. ')
-                #                 grade = input(f'Grade ({a.getData().getGrade()}): ') or a.getData().getGrade()
-                #                 while grade != 'A' and grade != 'B' and grade != 'C' and grade != 'D' and grade != 'F' and grade != 'N/A':
-                #                     grade = input('Please enter a valid grade. ')
-                #
-                #                 c = Course(number, semester, delivery, status, grade)
-                #                 newCourses.append(c)
-                #
-                #                 a = a.next
-                #
-                #         birthDay = int(
-                #             input(f'Day of birth ({s.get_birth_date().getDay()}): ')) or s.get_birth_date().getDay()
-                #         birthMonth = int(input(
-                #             f'Month of birth ({s.get_birth_date().getMonth()}): ')) or s.get_birth_date().getMonth()
-                #         birthYear = int(input(
-                #             f'Year of birth ({s.get_birth_date().getYear()}): ')) or s.get_birth_date().getYear()
-                #         birthDate = Date(birthDay, birthMonth, birthYear)
-                #
-                #         acceptanceDay = int(input(
-                #             f'Day of acceptance ({s.get_acceptance().getDay()}): ')) or s.get_acceptance().getDay()
-                #         acceptanceMonth = int(input(
-                #             f'Month of acceptance ({s.get_acceptance().getMonth()}): ')) or s.get_acceptance().getMonth()
-                #         acceptanceYear = int(input(
-                #             f'Year of acceptance ({s.get_acceptance().getYear()}): ')) or s.get_acceptance().getYear()
-                #         acceptanceDate = Date(acceptanceDay, acceptanceMonth, acceptanceYear)
-                #
-                #         term = input(f'Term ({s.get_semester().getTerm()}): ') or s.get_semester().getTerm()
-                #         year = int(input(f'Year ({s.get_semester().getYear()}): ')) or s.get_semester().getYear()
-                #         semester = Semester(term, year)
-                #
-                #         major = input(f'Major ({s.get_major()}): ') or s.get_major()
-                #
-                #         # Update student information
-                #         s.set_fName(fName)
-                #         s.set_mName(mName)
-                #         s.set_lName(lName)
-                #         s.set_address_list(addresses)
-                #         s.set_email_list(emails)
-                #         s.set_phone_list(phones)
-                #         s.set_birth_date(birthDate)
-                #         s.set_acceptance(acceptanceDate)
-                #         s.set_semester(semester)
-                #         s.set_major(major)
-                #         s.setCourse(newCourses)
-                #         print('Student information updated!')
-                #     advisee = advisee.next
+                if not advisor.getData().getAdvisee():
+                    print('There are no students to display')
+                else:
+                    advisee = advisor.getData().getAdvisee().head
+                    while advisee:
+                        s = advisee.getData()
+                        found = True
+                        print(str(advisee))  # Prints student information
+                        print('Please enter new information. Leave blank to keep the previous information.')
+                        fName = input(f'First name ({s.get_fName()}): ') or s.get_fName()
+                        mName = input(f'Middle name ({s.get_mName()}): ') or s.get_mName()
+                        lName = input(f'Last name ({s.get_lName()}): ') or s.get_lName()
+                        addresses = []
+
+                        for i in s.get_address_list():
+                            street = input(f'Street ({i.getStreet()}): ') or i.getStreet()
+                            city = input(f'City ({i.getCity()}): ') or i.getCity()
+                            state = input(f'State ({i.getState()}): ') or i.getState()
+                            zip = int(input(f'Zip code ({i.getZipCode()}): ')) or i.getZipCode()
+                            type = input(f'Type ({i.getType()}): ') or i.getType()
+                            address = Address(street, city, state, zip, type)
+                            addresses.append(address)
+
+                        emails = []
+                        for i in s.get_email_list():
+                            email = input(f'Email ({i.getEmailAddress()}): ') or i.getEmailAddress()
+                            type = input(f'Type ({i.getEmailType()}): ') or i.getEmailType()
+                            email = Email(email, type)
+                            emails.append(email)
+
+                        phones = []
+                        for i in s.get_phone_list():
+                            phone = input(f'Phone ({i.getPhoneNumber()}): ') or i.getPhoneNumber()
+                            type = input(f'Type ({i.getPhoneType()}): ') or i.getPhoneType()
+                            phone = Phone(phone, type)
+                            phones.append(phone)
+
+                        if s.getCourse():
+                            a = s.getCourse().head
+                            while a:
+                                number = input(
+                                    f'Course number ({a.getData().getNumber()}): ') or a.getData().getNumber()
+                                semester = input(
+                                    f'Semester ({a.getData().getSemester()}): ') or a.getData().getSemester()
+                                delivery = input(
+                                    f'Delivery ({a.getData().getDelivery()}): ') or a.getData().getDelivery()
+                                while delivery != 'In Person' and delivery != 'Online' and delivery != 'Hybrid':
+                                    delivery = input('Please enter In Person, Hybrid, or Online. ')
+                                status = input(f'Status ({a.getData().getStatus()}): ') or a.getData().getStatus()
+                                while status != 'IP' and status != 'Completed' and status != 'Dropped':
+                                    status = input('Please enter IP, Completed, or Dropped. ')
+                                grade = input(f'Grade ({a.getData().getGrade()}): ') or a.getData().getGrade()
+                                while grade != 'A' and grade != 'B' and grade != 'C' and grade != 'D' and grade != 'F' and grade != 'N/A':
+                                    grade = input('Please enter a valid grade. ')
+
+                                c = Course(number, semester, delivery, status, grade)
+                                newCourses.append(c)
+
+                                a = a.next
+
+                        birthDay = int(
+                            input(f'Day of birth ({s.get_birth_date().getDay()}): ')) or s.get_birth_date().getDay()
+                        birthMonth = int(input(
+                            f'Month of birth ({s.get_birth_date().getMonth()}): ')) or s.get_birth_date().getMonth()
+                        birthYear = int(input(
+                            f'Year of birth ({s.get_birth_date().getYear()}): ')) or s.get_birth_date().getYear()
+                        birthDate = Date(birthDay, birthMonth, birthYear)
+
+                        acceptanceDay = int(input(
+                            f'Day of acceptance ({s.get_acceptance().getDay()}): ')) or s.get_acceptance().getDay()
+                        acceptanceMonth = int(input(
+                            f'Month of acceptance ({s.get_acceptance().getMonth()}): ')) or s.get_acceptance().getMonth()
+                        acceptanceYear = int(input(
+                            f'Year of acceptance ({s.get_acceptance().getYear()}): ')) or s.get_acceptance().getYear()
+                        acceptanceDate = Date(acceptanceDay, acceptanceMonth, acceptanceYear)
+
+                        term = input(f'Term ({s.get_semester().getTerm()}): ') or s.get_semester().getTerm()
+                        year = int(input(f'Year ({s.get_semester().getYear()}): ')) or s.get_semester().getYear()
+                        semester = Semester(term, year)
+
+                        major = input(f'Major ({s.get_major()}): ') or s.get_major()
+
+                        # Update student information
+                        s.set_fName(fName)
+                        s.set_mName(mName)
+                        s.set_lName(lName)
+                        s.set_address_list(addresses)
+                        s.set_email_list(emails)
+                        s.set_phone_list(phones)
+                        s.set_birth_date(birthDate)
+                        s.set_acceptance(acceptanceDate)
+                        s.set_semester(semester)
+                        s.set_major(major)
+                        s.setCourse(newCourses)
+                        print('Student information updated!')
+                        advisee = advisee.next
 
             advisor.getData().setFirstName(fName)
             advisor.getData().setMiddleName(mName)
