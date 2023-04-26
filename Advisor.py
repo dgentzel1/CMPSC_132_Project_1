@@ -1,12 +1,9 @@
 # Name: Christian Ankney and David Gentzel
 # Course: CMPSC 132
 # File Name: Advisor.py
-# Date: 4/30/23
+# Date: 4/25/23
 #
 # Short Description: Store Advisor information
-
-# Node class for linkedlist
-
 from LinkedList import LinkedList
 
 class Advisor:

@@ -1,7 +1,7 @@
 # Name: Christian Ankney and David Gentzel
 # Course: CMPSC 132
 # File Name: LinkedList.py
-# Date: 4/30/23
+# Date: 4/25/23
 #
 # Short Description: Linkedlist ADT
 
