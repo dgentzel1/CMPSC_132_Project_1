@@ -1,0 +1,1855 @@
+TESTING DATA
+
+-------Testing adding student, viewing students information, and deleting student----------
+
+"C:\Program Files\Python310\python.exe" C:\Users\cgdan\PycharmProjects\CMPSC_132_Project\Tester.py
+This program will allow users to add, edit, search, and remove student information.
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    1
+Student ID: 07
+Student first name: Bobathy
+Student middle name: Johnathan
+Student last name: Joe
+Student street address: 123 Example St
+Student city: Nowhere
+Student state: Noplace
+Student zip code: 00001
+Student address type: Home
+Would you like to enter another address? Enter 1 for yes and 0 for no. 0
+Student email address: bobathyjohnathanjoe@gmail.com
+Student email type: Personal
+Would you like to enter another email? Enter 1 for yes and 0 for no. 1
+Student email address: bobsschoolemail@school.edu
+Student email type: School
+Would you like to enter another email? Enter 1 for yes and 0 for no. 0
+Student phone number: 123-123-1234
+Student phone type: Personal
+Would you like to enter another phone? Enter 1 for yes and 0 for no. 0
+Enter course number: 132
+Enter course semester: Fall
+Please enter delivery method (In Person, Online, or Hybrid): Online
+Please enter course status (IP, Completed, or Dropped): Completed
+Enter grade: B
+Would you like to enter another course? Enter 1 for yes and 0 for no. 0
+Student day of birth: 1
+Student month of birth: 1
+Student year of birth: 2002
+Student day of acceptance: 5
+Student month of acceptance: 4
+Student year of acceptance: 2021
+Student semester: Spring
+Student term year: 2022
+Student intended major: Lobodomy Sciences
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    4
+Enter ID of student for display: 07
+Searching for student with ID: 7
+Course: 132
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: B
+
+
+ID: 7
+Name: Bobathy Johnathan Joe
+Addresses: 123 Example St, Nowhere, Noplace 00001 (Home)
+Emails: bobathyjohnathanjoe@gmail.com (Personal), bobsschoolemail@school.edu (School)
+Phones: 123-123-1234 (Personal)
+Birth date: 1/1/2002
+Acceptance date: 4/5/2021
+Semester: Spring 2022
+Intended major: Lobodomy Sciences
+Courses: Course: 132
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: B
+
+
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    3
+Enter the id of student you want to delete: 07
+You have selected student id:7, confirm deletion? 1 for yes/0 for no: 1
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    4
+Enter ID of student for display: 07
+Searching for student with ID: 7
+No student found with ID:7
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    6
+
+Process finished with exit code 0
+
+
+----------Testing Advisor display and delete menu functions----------
+"C:\Program Files\Python310\python.exe" C:\Users\cgdan\PycharmProjects\CMPSC_132_Project\Tester.py
+This program will allow users to add, edit, search, and remove student information.
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    5
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add an advisor
+    2 - Display advisor's information with student information
+    3 - Edit advisor's information
+    4 - Remove student
+    5 - Display only advisor's information
+    6 - Exit
+
+    5
+Enter first and last name of advisor: Charles Helou
+Searching for advisor: Charles Helou
+Charles Helou
+Charles X Helou
+Department: Advisor
+Title: Mathematics
+
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    5
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add an advisor
+    2 - Display advisor's information with student information
+    3 - Edit advisor's information
+    4 - Remove student
+    5 - Display only advisor's information
+    6 - Exit
+
+    2
+Enter first and last name of advisor: Charles Helou
+Searching for advisor: Charles Helou
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2001
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+
+Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+
+Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2001
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+
+Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2001
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+
+Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+
+Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2001
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+ID: 4
+Name: Samantha M Garcia
+Addresses: 321 Pine St, New Orleans, Delaware 13241 ((Type)
+Emails: samantha@example.com (Personal)
+Phones: 610-555-7890 (Mobile)
+Birth date: 4/4/2004
+Acceptance date: 1/15/20023
+Semester: Spring 2023
+Intended major: History
+Courses: Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+
+Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+
+Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: MATH 140
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: A
+
+
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2001
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+ID: 4
+Name: Samantha M Garcia
+Addresses: 321 Pine St, New Orleans, Delaware 13241 ((Type)
+Emails: samantha@example.com (Personal)
+Phones: 610-555-7890 (Mobile)
+Birth date: 4/4/2004
+Acceptance date: 1/15/20023
+Semester: Spring 2023
+Intended major: History
+Courses: Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+
+ID: 5
+Name: David J Lee
+Addresses: 654 Cedar St, Seattle, California 12345 ((Type)
+Emails: davidlee@example.com (Personal)
+Phones: 610-555-2345 (Mobile)
+Birth date: 5/5/2005
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: English
+Courses: Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: MATH 140
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: A
+
+
+
+Advisor Charles X Helou
+Department: Advisor
+Title: Mathematics
+Advisees:
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2001
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+ID: 4
+Name: Samantha M Garcia
+Addresses: 321 Pine St, New Orleans, Delaware 13241 ((Type)
+Emails: samantha@example.com (Personal)
+Phones: 610-555-7890 (Mobile)
+Birth date: 4/4/2004
+Acceptance date: 1/15/20023
+Semester: Spring 2023
+Intended major: History
+Courses: Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+
+ID: 5
+Name: David J Lee
+Addresses: 654 Cedar St, Seattle, California 12345 ((Type)
+Emails: davidlee@example.com (Personal)
+Phones: 610-555-2345 (Mobile)
+Birth date: 5/5/2005
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: English
+Courses: Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: MATH 140
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: A
+
+
+
+
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    5
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add an advisor
+    2 - Display advisor's information with student information
+    3 - Edit advisor's information
+    4 - Remove student
+    5 - Display only advisor's information
+    6 - Exit
+
+    4
+Enter first and last name of student you wish to delete: John Doe
+Searching for Student: John Doe
+John Doe
+John Doe Found!
+John Doe has been deleted.
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    5
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add an advisor
+    2 - Display advisor's information with student information
+    3 - Edit advisor's information
+    4 - Remove student
+    5 - Display only advisor's information
+    6 - Exit
+
+    2
+Enter first and last name of advisor: Charles Helou
+Searching for advisor: Charles Helou
+Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+
+Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+
+Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+
+Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+
+Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+
+Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+ID: 4
+Name: Samantha M Garcia
+Addresses: 321 Pine St, New Orleans, Delaware 13241 ((Type)
+Emails: samantha@example.com (Personal)
+Phones: 610-555-7890 (Mobile)
+Birth date: 4/4/2004
+Acceptance date: 1/15/20023
+Semester: Spring 2023
+Intended major: History
+Courses: Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+
+Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+
+Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: MATH 140
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: A
+
+
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+ID: 4
+Name: Samantha M Garcia
+Addresses: 321 Pine St, New Orleans, Delaware 13241 ((Type)
+Emails: samantha@example.com (Personal)
+Phones: 610-555-7890 (Mobile)
+Birth date: 4/4/2004
+Acceptance date: 1/15/20023
+Semester: Spring 2023
+Intended major: History
+Courses: Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+
+ID: 5
+Name: David J Lee
+Addresses: 654 Cedar St, Seattle, California 12345 ((Type)
+Emails: davidlee@example.com (Personal)
+Phones: 610-555-2345 (Mobile)
+Birth date: 5/5/2005
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: English
+Courses: Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: MATH 140
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: A
+
+
+
+Advisor Charles X Helou
+Department: Advisor
+Title: Mathematics
+Advisees:
+ID: 2
+Name: Jane  Smith
+Addresses: 456 Elm St, Philadelphia, Colorado 17234 ((Type)
+Emails: janesmith@example.com (Personal)
+Phones: 610-555-5678 (Mobile)
+Birth date: 2/2/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Biology
+Courses: Course: BBH 221
+Semester: Fall
+Delivery: In Person
+Status: Completed
+Grade: B
+Course: MATH 141
+Semester: Spring
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 360
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+ID: 3
+Name: Bob William Johnson
+Addresses: 324 Spruce St, Los Angeles, Pennyslvania 16312 ((Type)
+Emails: bob@example.com (Personal), bwilliam@example.com (Work)
+Phones: 610-555-9012 (Mobile), 610-555-3456 (Work)
+Birth date: 3/3/2003
+Acceptance date: 1/15/2023
+Semester: Spring 2023
+Intended major: Psychology
+Courses: Course: EE 210
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Summer
+Delivery: Online
+Status: Completed
+Grade: C
+Course: Music 5
+Semester: Fall
+Delivery: Hybrid
+Status: Dropped
+Grade: N/A
+
+
+
+ID: 4
+Name: Samantha M Garcia
+Addresses: 321 Pine St, New Orleans, Delaware 13241 ((Type)
+Emails: samantha@example.com (Personal)
+Phones: 610-555-7890 (Mobile)
+Birth date: 4/4/2004
+Acceptance date: 1/15/20023
+Semester: Spring 2023
+Intended major: History
+Courses: Course: MATH 230
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: D
+Course: MATH 220
+Semester: Fall
+Delivery: Online
+Status: IP
+Grade: A
+Course: ART 20
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: C
+
+
+
+ID: 5
+Name: David J Lee
+Addresses: 654 Cedar St, Seattle, California 12345 ((Type)
+Emails: davidlee@example.com (Personal)
+Phones: 610-555-2345 (Mobile)
+Birth date: 5/5/2005
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: English
+Courses: Course: PHYS 211
+Semester: Spring
+Delivery: In Person
+Status: Dropped
+Grade: N/A
+Course: EMCH 211
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: MATH 140
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: A
+
+
+
+
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    6
+
+Process finished with exit code 0
+
+
+--------Testing Edit student function -----------
+"C:\Program Files\Python310\python.exe" C:\Users\cgdan\PycharmProjects\CMPSC_132_Project\Tester.py
+This program will allow users to add, edit, search, and remove student information.
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    2
+Please enter the student ID that you want to manipulate: 1
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2001
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+Please enter new information. Leave blank to keep the previous information.
+First name (John):
+Middle name (Michael):
+Last name (Doe):
+Street (123 Main St):
+City (Houston):
+State (Montana):
+Zip code (15213): 15213
+Type ((Type):
+Email (johndoe@example.com):
+Type (Personal):
+Phone (610-555-1234):
+Type (Mobile):
+Course number (CMPSC 132):
+Semester (Spring):
+Delivery (In Person):
+Status (IP):
+Grade (N/A):
+Course number (MATH 140):
+Semester (Fall):
+Delivery (Online):
+Status (Completed):
+Grade (A):
+Course number (CMPSC 221):
+Semester (Spring):
+Delivery (In Person):
+Status (IP):
+Grade (N/A):
+Day of birth (1): 1
+Month of birth (1): 1
+Year of birth (2001): 2002
+Day of acceptance (9): 9
+Month of acceptance (1): 1
+Year of acceptance (2022): 2022
+Term (Fall):
+Year (2022): 2022
+Major (Computer Science):
+Student information updated!
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    4
+Enter ID of student for display: 1
+Searching for student with ID: 1
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+ID: 1
+Name: John Michael Doe
+Addresses: 123 Main St, Houston, Montana 15213 ((Type)
+Emails: johndoe@example.com (Personal)
+Phones: 610-555-1234 (Mobile)
+Birth date: 1/1/2002
+Acceptance date: 1/9/2022
+Semester: Fall 2022
+Intended major: Computer Science
+Courses: Course: CMPSC 132
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+Course: MATH 140
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+Course: CMPSC 221
+Semester: Spring
+Delivery: In Person
+Status: IP
+Grade: N/A
+
+
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    6
+
+Process finished with exit code 0
+
+-----------Testing Edit function in advisor menu------------
+"C:\Program Files\Python310\python.exe" C:\Users\cgdan\PycharmProjects\CMPSC_132_Project\Tester.py
+This program will allow users to add, edit, search, and remove student information.
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    5
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add an advisor
+    2 - Display advisor's information with student information
+    3 - Edit advisor's information
+    4 - Remove student
+    5 - Display only advisor's information
+    6 - Exit
+
+    3
+Enter first and last name of advisor: Eggs Benedict
+Searching for advisor: Eggs Benedict
+First Name (Eggs):
+Middle Name (Dahmer):
+Name (Benedict):
+Title (Advisor):
+Department (Culanary):
+Would you like to add another advisee? Enter 1 for yes ad 0 for no: 1
+Student ID: 1
+Student first name: James
+Student middle name: Madison
+Student last name: Lewis
+Student street address: 123 Example St
+Student city: Nowhere
+Student state: Noplace
+Student zip code: 10000
+Student address type: Home
+Would you like to enter another address? Enter 1 for yes and 0 for no. 0
+Student email address: james@gmail.com
+Student email type: Personal
+Would you like to enter another email? Enter 1 for yes and 0 for no. 0
+Student phone number: 123-123-1234
+Student phone type: Personal
+Would you like to enter another phone? Enter 1 for yes and 0 for no. 0
+Enter course number: 123
+Enter course semester: Fall
+Please enter delivery method (In Person, Online, or Hybrid): Online
+Please enter course status (IP, Completed, or Dropped): Completed
+Enter grade: A
+Would you like to enter another course? Enter 1 for yes and 0 for no. 0
+Student day of birth: 1
+Student month of birth: 1
+Student year of birth: 2001
+Student day of acceptance: 1
+Student month of acceptance: 1
+Student year of acceptance: 2022
+Student semester: Spring
+Student term year: 2023
+Student intended major: Cybersecurity
+Would you like to add another advisee? Enter 1 for yes and 0 for no: 0
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    5
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add an advisor
+    2 - Display advisor's information with student information
+    3 - Edit advisor's information
+    4 - Remove student
+    5 - Display only advisor's information
+    6 - Exit
+
+    2
+Enter first and last name of advisor: Eggs Benedict
+Searching for advisor: Eggs Benedict
+Course: 123
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+
+ID: 1
+Name: James Madison Lewis
+Addresses: 123 Example St, Nowhere, Noplace 10000 (Home)
+Emails: james@gmail.com (Personal)
+Phones: 123-123-1234 (Personal)
+Birth date: 1/1/2001
+Acceptance date: 1/1/2022
+Semester: Spring 2023
+Intended major: Cybersecurity
+Courses: Course: 123
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+
+
+Advisor Eggs Dahmer Benedict
+Department: Advisor
+Title: Culanary
+Advisees:
+ID: 1
+Name: james Madison Lewis
+Addresses: 123 Example St, Nowhere, Noplace 10000 (Home)
+Emails: james@gmail.com (personal)
+Phones: 1231231234 (Personal)
+Birth date: 1/1/2001
+Acceptance date: 1/1/2022
+Semester: Spring 2023
+Intended major: Cyebrsecurity
+Courses: Course: 123
+Semester: Fall
+Delivery: Online
+Status: Completed
+Grade: A
+
+
+
+
+
+
+ Please type the corresponding number for the operation that you would like to perform.
+
+    1 - Add student to list
+    2 - Edit student in list
+    3 - Delete student from list
+    4 - Display information for a student
+    5 - Navigate to advisor menu
+    6 - Exit
+
+    6
+
+Process finished with exit code 0
