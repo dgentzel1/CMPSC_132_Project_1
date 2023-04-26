@@ -1,7 +1,7 @@
 # Name: Christian Ankney and David Gentzel
 # Course: CMPSC 132
 # File Name: Tester.py
-# Date: 4/30/23
+# Date: 4/25/23
 #
 # Short Description: Use menu to access and manipulate students information
 
@@ -897,7 +897,7 @@ def removeStudent():
                     # Skip over the node to be deleted
                     previous_student.next = student.next
                 else:
-                    # The node to be deleted is the head of the list
+                    # The node thats gonna be deleted is the head
                     advisor.getData().getAdvisee().head = student.next
                     print(f'{s} has been deleted.')
                 main()
@@ -928,8 +928,6 @@ def displayAdvisor():
         print(f'No advisor found with name: {name}')
         main()
 
-def exit():
-    pass
 
 # Advisor option menu
 def advisorOptions(student_list):
